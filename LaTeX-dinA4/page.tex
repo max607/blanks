@@ -1,0 +1,57 @@
+%%%%% preamble
+\documentclass[12pt]{article}
+
+% meta data
+\title{Page}
+\author{Maximilian Schneider}
+\date{\today}
+
+% text encoding
+\usepackage[utf8]{inputenc}
+
+% better interaction with pdf (strg + f)
+\usepackage[T1]{fontenc}
+
+% comment, quote environment (load csquotes before babel)
+\usepackage{comment, csquotes}
+
+% language, line breaks
+\usepackage[english]{babel}
+
+% page measurements
+\usepackage[a4paper, width=150mm, top=25mm, bottom=25mm, bindingoffset = 6mm]{geometry}
+
+% more layout
+\usepackage{fancyhdr}
+\pagestyle{fancy}  % activate fancyhdr
+\renewcommand{\headrulewidth}{0.5pt}  % change top line
+\renewcommand{\footrulewidth}{0.5pt}  % show bottom line
+
+% no indent, no extra space between paragraphs, line spacing
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{0cm}
+\renewcommand{\baselinestretch}{1.15}
+
+% deal with hbox overflow
+\usepackage[activate={true, nocompatibility}, final, tracking=true, kerning=true, spacing=true,
+            factor=1100, stretch=10, shrink=10]{microtype}
+
+% load external figures, embed functioning links
+\usepackage{graphicx, hyperref}
+
+% sub-figures
+\usepackage{caption, subcaption}
+
+% math symbols
+\usepackage{amsmath, amssymb}
+
+%%%%%% layout
+\fancyhf{}
+\fancyhead[c]{\thepage}  % page number
+
+\begin{document}
+
+\section*{Titel}
+Let's do this in LaTex.
+
+\end{document}

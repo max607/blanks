@@ -1,0 +1,29 @@
+---
+title: "R Markdown Preamble"
+author: "Max"
+date: "`r format(Sys.time(), '%d.%m.%Y')`"
+output:
+  rmdformats::html_clean:
+    mathjax: NULL
+    thumbnails: FALSE
+    code_folding: hide
+---
+
+<style>
+body {
+text-align: justify}
+.main-container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+```{r setup}
+rm(list = ls(all = TRUE))
+knitr::opts_chunk$set(fig.align="center")
+library(data.table)
+library(magrittr)
+library(ggplot2)
+theme_set(theme_bw())
+```
