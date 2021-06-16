@@ -24,6 +24,5 @@ rm(list = ls(all = TRUE))
 knitr::opts_chunk$set(fig.align="center")
 library(data.table)
 library(magrittr)
-library(ggplot2)
-theme_set(theme_bw())
+library(ggplot2); theme_set(theme_bw())
 ```
