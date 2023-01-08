@@ -125,13 +125,13 @@ Suspendisse potenti.
 Suspendisse dictum nisi est, et finibus nulla efficitur lacinia.
 Nam sapien tortor, ullamcorper id consequat vel, hendrerit et orci. Quisque laoreet ut tellus ac iaculis.
 
+# (APPENDIX) Appendix {-}
+
 # References
 
 <div id="refs"></div>
 
-# (APPENDIX) Appendix {-}
-
-# Appendix A
+# Appendix
 
 Proin posuere magna lacus, eget vulputate lorem consectetur in.
 Fusce sed placerat arcu.
