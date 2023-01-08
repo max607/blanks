@@ -1,0 +1,144 @@
+---
+documentclass: report
+link-citations: true
+urlcolor: blue
+bibliography: references.bib
+output:
+  bookdown::pdf_document2:
+    toc: true
+    toc_depth: 3
+    includes:
+      in_header: preamble.tex
+    extra_dependencies: ["bm"]
+title: |
+  | Report
+  | Statistical Analysis \vspace{1cm}
+  | ![](figures/sigillum-lmu.png){width=3cm}       \vspace{1cm}
+subtitle: |
+  | Submitted
+author: |
+  | By
+  | Maximilian Schneider
+date: "`r format(Sys.time(), '%d.%m.%Y')`"
+abstract: |
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Curabitur et libero eros.
+  Mauris varius mattis placerat.
+  Mauris a dignissim justo, et convallis enim.
+  Nulla facilisi.
+  Suspendisse ultricies orci eget lacus volutpat bibendum.
+  Nullam lorem nisi, fringilla quis justo at, fermentum lobortis tortor.
+  Mauris tincidunt leo in mi consectetur volutpat.
+  Aliquam semper luctus vestibulum.
+  Interdum et malesuada fames ac ante ipsum primis in faucibus.
+  Aliquam convallis dui in bibendum scelerisque.
+
+  The code for this project is available under https://github.com/max607/blanks.
+---
+
+<style>
+body {
+text-align: justify}
+.main-container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+# Introduction
+
+```{r setup, include=FALSE}
+# rmarkdown settings
+knitr::opts_chunk$set(fig.align = "center", out.width = '80%', include = FALSE, echo = FALSE,
+                      cache = FALSE, message = FALSE, warning = FALSE)
+
+# packages
+library(data.table)
+library(magrittr)
+library(ggplot2); theme_set(theme_bw())
+
+# code
+source("R/example.R")
+```
+
+> "Cras vitae eleifend nisl.
+> Curabitur fringilla risus nulla, sit amet egestas est lobortis nec.
+> Vestibulum a convallis sapien.
+> [...] Mauris massa velit, ullamcorper sed lacinia vel, venenatis quis leo.
+> Aliquam erat volutpat.
+> Mauris turpis massa, iaculis a sem eu, blandit lacinia elit.
+> Mauris viverra leo eu lectus suscipit tincidunt."
+>
+> --- Lipsum
+
+Reference to Section \@ref(reference-a-figure).
+
+# Body
+
+## Reference a Figure
+
+To evaluate inline code:
+$1 + 1 =$ `r 1 + 1`.
+
+Reference to Figure \@ref(fig:plot-scatter).
+
+```{r plot-scatter, include=TRUE, fig.cap='(ref:plot-scatter)'}
+ggplot(df_example, aes(x = x, y = y)) +
+  geom_point()
+```
+(ref:plot-scatter) Caption 1.
+
+## Reference a Table
+
+Reference to Table \@ref(tab:table1).
+
+```{r table1, include=TRUE}
+knitr::kable(df_example, digits = 2, booktabs = TRUE,
+             caption = "Caption for a table.")
+```
+
+## Reference an Equation
+
+Reference to Equation \@ref(eq:equation1).
+
+\begin{equation}
+  2 = 1 + 1
+  (\#eq:equation1)
+\end{equation}
+
+## Reference a paper
+
+Reference to @schneider2023example.
+
+# Conclusion
+
+Nam interdum risus tellus, id consequat tellus porta sed.
+Phasellus scelerisque augue nec lacinia pharetra.
+Suspendisse lacus nisi, dapibus in neque quis, congue tincidunt risus.
+Ut aliquet tristique massa, eget condimentum justo mollis in.
+Aenean mi elit, scelerisque nec erat ut, semper pellentesque est.
+Etiam ut suscipit risus.
+Mauris tincidunt ligula neque.
+Nullam rhoncus risus malesuada diam luctus, at porttitor risus facilisis.
+Suspendisse potenti.
+Suspendisse dictum nisi est, et finibus nulla efficitur lacinia.
+Nam sapien tortor, ullamcorper id consequat vel, hendrerit et orci. Quisque laoreet ut tellus ac iaculis.
+
+# References
+
+<div id="refs"></div>
+
+# (APPENDIX) Appendix {-}
+
+# Appendix A
+
+Proin posuere magna lacus, eget vulputate lorem consectetur in.
+Fusce sed placerat arcu.
+Morbi eu aliquet justo.
+Aenean quam erat, maximus imperdiet odio vel, porttitor pretium ligula.
+Vestibulum et turpis convallis, aliquet nisl eget, fermentum enim.
+Morbi egestas massa sed condimentum gravida.
+Mauris eu metus diam.
+Aliquam dictum placerat enim, ac tempor nulla tempus id.
+
